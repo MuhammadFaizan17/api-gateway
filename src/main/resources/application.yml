@@ -1,0 +1,15 @@
+server:
+  port: 8080
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: studentService
+          uri: http://localhost:8081/student-service
+          predicates:
+            - Path=/student-service/**
+        - id: feeService
+          uri: http://localhost:8082/fee-service
+          predicates:
+            - Path=/fee-service/**
