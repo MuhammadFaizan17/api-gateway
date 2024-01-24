@@ -13,3 +13,7 @@ spring:
           uri: http://localhost:8082/fee-service
           predicates:
             - Path=/fee-service/**
+        - id: paymentService
+          uri: http://localhost:8083/payment-service
+          predicates:
+            - Path=/payment-service/**
